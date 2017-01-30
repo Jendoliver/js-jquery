@@ -1,0 +1,32 @@
+body,html{position:relative;
+width: 100%;
+height: 100%;
+text-align: center;
+}
+h1,h2,h3{padding:0px; margin:0px;}
+div{
+    position:relative;
+    display: inline-block;
+    vertical-align: top;
+}
+#taulell{
+    width: 500px;  
+    background-color: darkgoldenrod;
+    border:5px solid black;
+    padding:5px;
+    text-align: center;
+    height: 400px;
+}
+#jugador1,#resultats,#jugador2{
+    width: 30%;
+    height: 100%;
+}
+#resultats>div:first-child{
+    font-size:2.2em;
+}
+#resultats>div{
+    width: 100%;
+}
+#jugador2>img{
+    display: block;
+}

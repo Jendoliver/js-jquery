@@ -34,7 +34,7 @@ function animateOptions1()
 function getOption1()
 {
     // CSS
-    option1 = $(this).id;
+    option1 = this.id;
     $("#jugador1 > img").off();
     $("#jugador1 > img").css({"display":"none"});
     $("#jugador2 > img").css({"display":"block"});
@@ -57,8 +57,112 @@ function animateOptions2()
 function getOption2()
 {
     // CSS
-    option2 = $(this).id;
+    option2 = this.id;
     $("#jugador2 > img").off();
     $("#jugador2 > img").css({"display":"none"});
     $("#p2").css({"background-color":"inherit"});
+    getWinner();
+}
+
+function getWinner()
+{
+    if(option1 == "rock1")
+    {
+        if(option2 == "rock2") // EMPATE
+        {
+            option1 = "#"+option1;
+            option2 = "#"+option2;
+            $(option1).css({"display":"block"});
+            $(option2).css({"display":"block"});
+            $(option1).animate({"position":"absolute","left":"150px","top":"150px"},{"duration":500});
+            $(option2).animate({"position":"absolute","left":"-150px","top":"150px"},{"duration":500});
+            $("#draw").css({"display":"inline-block"});
+        }
+        else if(option2 == "paper2") // 2 wins
+        {
+            option1 = "#"+option1;
+            option2 = "#"+option2;
+            $(option1).css({"display":"block"});
+            $(option2).css({"display":"block"});
+            $(option1).animate({"position":"absolute","left":"150px","top":"150px"},{"duration":500});
+            $(option2).animate({"position":"absolute","left":"-150px","top":"150px"},{"duration":500});
+            $("#player2Win").css({"display":"inline-block"});
+        }
+        else if(option2 == "scissor2") // 1 wins
+        {
+            option1 = "#"+option1;
+            option2 = "#"+option2;
+            $(option1).css({"display":"block"});
+            $(option2).css({"display":"block"});
+            $(option1).animate({"position":"absolute","left":"150px","top":"150px"},{"duration":500});
+            $(option2).animate({"position":"absolute","left":"-150px","top":"150px"},{"duration":500});
+            $("#player1Win").css({"display":"inline-block"});
+        }
+    }
+    else if(option1 == "paper1")
+    {
+        if(option2 == "paper2") // EMPATE
+        {
+            option1 = "#"+option1;
+            option2 = "#"+option2;
+            $(option1).css({"display":"block"});
+            $(option2).css({"display":"block"});
+            $(option1).animate({"position":"absolute","left":"150px","top":"150px"},{"duration":500});
+            $(option2).animate({"position":"absolute","left":"-150px","top":"150px"},{"duration":500});
+            $("#draw").css({"display":"inline-block"});
+        }
+        else if(option2 == "scissor2") // 2 wins
+        {
+            option1 = "#"+option1;
+            option2 = "#"+option2;
+            $(option1).css({"display":"block"});
+            $(option2).css({"display":"block"});
+            $(option1).animate({"position":"absolute","left":"150px","top":"150px"},{"duration":500});
+            $(option2).animate({"position":"absolute","left":"-150px","top":"150px"},{"duration":500});
+            $("#player2Win").css({"display":"inline-block"});
+        }
+        else if(option2 == "rock2") // 1 wins
+        {
+            option1 = "#"+option1;
+            option2 = "#"+option2;
+            $(option1).css({"display":"block"});
+            $(option2).css({"display":"block"});
+            $(option1).animate({"position":"absolute","left":"150px","top":"150px"},{"duration":500});
+            $(option2).animate({"position":"absolute","left":"-150px","top":"150px"},{"duration":500});
+            $("#player1Win").css({"display":"inline-block"});
+        }
+    }
+    else if(option1 == "scissor1")
+    {
+        if(option2 == "scissor2") // EMPATE
+        {
+            option1 = "#"+option1;
+            option2 = "#"+option2;
+            $(option1).css({"display":"block"});
+            $(option2).css({"display":"block"});
+            $(option1).animate({"position":"absolute","left":"150px","top":"150px"},{"duration":500});
+            $(option2).animate({"position":"absolute","left":"-150px","top":"150px"},{"duration":500});
+            $("#draw").css({"display":"inline-block"});
+        }
+        else if(option2 == "rock2") // 2 wins
+        {
+            option1 = "#"+option1;
+            option2 = "#"+option2;
+            $(option1).css({"display":"block"});
+            $(option2).css({"display":"block"});
+            $(option1).animate({"position":"absolute","left":"150px","top":"150px"},{"duration":500});
+            $(option2).animate({"position":"absolute","left":"-150px","top":"150px"},{"duration":500});
+            $("#player2Win").css({"display":"inline-block"});
+        }
+        else if(option2 == "paper2") // 1 wins
+        {
+            option1 = "#"+option1;
+            option2 = "#"+option2;
+            $(option1).css({"display":"block"});
+            $(option2).css({"display":"block"});
+            $(option1).animate({"position":"absolute","left":"150px","top":"150px"},{"duration":500});
+            $(option2).animate({"position":"absolute","left":"-150px","top":"150px"},{"duration":500});
+            $("#player1Win").css({"display":"inline-block"});
+        }
+    }
 }

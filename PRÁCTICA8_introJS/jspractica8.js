@@ -81,5 +81,32 @@ function ejercicio05()
 
 function suma()
 {
-    //TODO
+    var num1 = window.prompt("Introduce un número");
+    var num2 = window.prompt("Introduce otro número venga que ya lo tienes primo");
+    var res = parseInt(num1) + parseInt(num2);
+    document.getElementById("result").innerHTML = "El resultado de sumar "+num1+" más "+num2+" es "+res;
+}
+
+function resta()
+{
+    var num1 = window.prompt("Introduce un número");
+    var num2 = window.prompt("Introduce otro número venga que ya lo tienes primo");
+    var res = parseInt(num1) - parseInt(num2);
+    document.getElementById("result").innerHTML = "El resultado de restar "+num1+" menos "+num2+" es "+res;
+}
+
+function multiplica()
+{
+    var num1 = parseInt(window.prompt("Introduce un número"));
+    var num2 = parseInt(window.prompt("Introduce otro número venga que ya lo tienes primo"));
+    var res = num1 * num2;
+    var div = document.getElementById("result");
+    var html = "El resultado de multiplicar "+num1+" por "+num2+" es "+res+"<br>";
+    html += "<ul>";
+    for(var i=num1; i<=res; i = i+num1)
+    {
+        html += "<li>"+i+"</li>";
+    }
+    html += "</ul>";
+    div.innerHTML = html;
 }

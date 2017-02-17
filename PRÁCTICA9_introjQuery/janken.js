@@ -85,7 +85,7 @@ function getOption2()
     getWinner();
 }
 
-/*function getWinner() NO RULA :(
+function getWinner()
 {
     $("#taulell").off();
     reset = 1;
@@ -100,15 +100,15 @@ function getOption2()
     
     var res = "#"+results[option1, option2];
     $(res).css({"display":"inline-block"});
-    option1 = "#"+option1;
-    option2 = "#"+option2;
+    option1 = "#"+option1+"1";
+    option2 = "#"+option2+"2";
     $(option1).css({"display":"block"});
     $(option2).css({"display":"block"});
     $(option1).animate({"position":"absolute","left":"150px","top":"150px"},{"duration":500});
     $(option2).animate({"position":"absolute","left":"-150px","top":"150px"},{"duration":500});
-}*/
+}
 
-function getWinner()
+/*function getWinner()
 {
     $("#taulell").off();
     reset = 1;

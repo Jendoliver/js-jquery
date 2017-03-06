@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <section>
+            <h2>
+                <a href="http://www.bensound.com">Bensound Royalty Free Music</a>
+            </h2>
+        </section>
+        <section>
+            <h2>Carrega la música clicada i comença a reproduir-la</h2>
+            <a href="muestraMusica.php?musica=cute">CUTE MUSIC</a> <br/>
+            <a href="muestraMusica.php?musica=epic">EPIC MUSIC</a> <br/>
+           
+            <form action="muestraMusica.php">
+                CUTE MUSIC
+                <input type="hidden" name="musica" value="cute"/>
+                <input type="submit" value="CUTE"/>
+            </form><br />
+            <form action="muestraMusica.php">
+                EPIC MUSIC
+                <input type="hidden" name="musica" value="epic"/>
+                <input type="submit" value ="EPIC"/>
+            </form>
+            
+        </section>
+        <section>
+            <h2>Carrega les dos musiques, i no les reprodueixis automaticament</h2>
+            <a  href="muestraMusica.php?musica=all">CUTE MUSIC & EPIC MUSIC</a>
+            <br />
+            <form>
+                ALL MUSIC
+                <input type="hidden" name="musica" value="all"/>
+                <input type="submit" value="CUTE&EPIC"/>
+            </form>
+        </section>
+        <section>
+            <h2>Carrega l'adreça indicada</h2>
+            <a href="muestraDireccion.php?addr=Abbey Road 3 , Westminster, Londres">Abbey Road 3 , Westminster, Londres</a> <br />
+            <form action="muestraDireccion.php">
+                Lombard Street<input type="hidden" name="addr" value="Lombard Street , San Francisco, California ">
+                <input type="submit" value="LOMBARD STREET"/>
+            </form>
+            <br />
+             <form action="muestraDireccion.php">
+                Introduce la dirección que quieres ver:
+                <input type="text" name="addr" >
+                <input type="submit" value="MOSTRA ADREÇA" />
+            </form>
+        </section>
+        <section>
+            <h2>Carrega 3 punts dins un mateix mapa</h2>
+            <a href="muestraDireccion.php?addr=three"> Mostra 3 Punts al mapa</a>
+        </section>
+        
+
+    </body>
+</html>

@@ -5,14 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="../jquery-3.1.1.min.js" type="text/javascript"></script>
     <script src="libs/jquery.validate.min.js" type="text/javascript"></script>
-    <script src="ejemploJQvalidate.js" type="text/javascript"></script>
+    <script src="validation.js" type="text/javascript"></script>
     <title>PRÁCTICA 10 - VALIDATION</title>
 </head>
 <body>
-    <form id="formulari">
-        Nombre: <input name="nombre"><br>
-        Número de hermanos: <input name="hermanos"><br>
-        <input type="submit">
+    <form id="formulari1">
+        Nombre: <input type="text" name="nombre"><br>
+        Apellido: <input type="text" name="apellido"><br>
+        Nacimiento: <input type="date" name="fecha"><br>
+        Número de PCs en casa: <input type="number" name="pcs"><br>
+        <input type="checkbox" name="conditions"> Acepto condiciones<br>
+        <input type="submit" value="Enviar">
+    </form><br><br>
+    <form id="formulari2">
+        Nombre: <input type="text" name="nombre"><br>
+        Código de barras: <input type="number" name="codigo"><br>
+        Caducidad: <input type="date" name="caducidad"><br>
+        Estado: <select name="estado">
+                    <option value="normal">Normal</option>
+                    <option value="oferta">Oferta</option>
+                    <option value="descuento">Descuento</option>
+                </select><br>
+        <input id="idnut" type="checkbox" name="infonut"> Tiene información nutricional?<br>
+        <div id="infonutricional" style="display: none">
+            Grasas: <input type="text" name="grasas"><br>
+            Azúcares: <input type="text" name="azucares"><br>
+            Fibra: <input type="text" name="fibra"><br>
+        </div>
+        <input type="submit" value="Enviar">
     </form>
 </body>
 </html>

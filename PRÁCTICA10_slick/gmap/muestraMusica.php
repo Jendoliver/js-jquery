@@ -14,14 +14,6 @@ and open the template in the editor.
         $musica = $_GET["musica"];
 
         echo $musica;
-        /*if ($musica == "cute") {
-            ?>
-            <audio controls autoplay loop preload="auto">
-                <source src="bensoundcute.mp3" type="audio/mpeg">
-                Audio no disponible.
-            </audio>
-            <?php
-        }*/
         
           if ($musica == "cute" || $musica == "epic") 
           {

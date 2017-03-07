@@ -32,39 +32,8 @@ and open the template in the editor.
         echo $addr;
         ?>
         <div id="mapa2" style="width: 500px; height:400px;"></div>
-        <?php
-        if($addr == "three")
-        { ?>
+        <?php if($addr == "three") $addr3 = "Laparadis"; ?>
         <script>
-            $(document).ready(init);
-            function init() {
-                $('#mapa2')
-                        .gmap3({
-                            zoom: 4
-                        })
-                        .marker([
-                            {address: "La çoça nostra", data: "<h3>Titulo</h3><div>La çoça nostra</div>", icon: "http://maps.google.com/mapfiles/marker_grey.png"},
-                            {address: "El clot de la mel", data: "<h3>Titulo</h3><div>El clot de la mel</div>", icon: "http://maps.google.com/mapfiles/marker_grey.png"},
-                            {address: "Disneyland la paraís", data: "<h3>Titulo</h3><div>Disneyland la paraís</div>", icon: "http://maps.google.com/mapfiles/marker_grey.png"}
-                        ])
-                        .on('click', function (marker) {  //Al clicar obrim una finestra sobre la marca i hi insertem el data de la marca
-                            marker.setIcon('http://maps.google.com/mapfiles/marker_green.png');
-                            var map = this.get(0); //this.get(0) retorna la primera propietat vinculada-> gmap3
-                            var infowindow = this.get(1); //this.get(1) retorna la segona propietat vinculada -> infowindow
-                            infowindow.setContent(marker.data);     //dins la finestra mostrem el atribut data de la marca
-                            infowindow.open(map, marker);
-                        })
-                        .then(function (markers) {
-                            markers[1].setIcon('http://maps.google.com/mapfiles/marker_orange.png');
-                        })
-                        .fit();
-            }
-        </script>
-        <?php }
-        else
-        { ?>
-        <script>
-
  var contentString = '<div id="content">' +
                     '<div id="siteNotice">' +
                     '</div>' +
@@ -95,6 +64,10 @@ and open the template in the editor.
                         .marker([
                             {position: [48.8620722, 2.352047], data: contentString},
                             {address: "<?php echo $addr ?>", data: "<h3>Titulo</h3><div><?php echo $addr ?></div>", icon: "http://maps.google.com/mapfiles/marker_grey.png"}
+                            <?php if($addr3 != "")
+                            { ?>
+                                ,{address: "Disneyland la paraís", data: "<h3>Titulo</h3><div>Disneyland la paraís</div>", icon: "http://maps.google.com/mapfiles/marker_grey.png"}
+                            <?php } ?>
                         ])
                         .on('click', function (marker) {  //Al clicar obrim una finestra sobre la marca i hi insertem el data de la marca
                             marker.setIcon('http://maps.google.com/mapfiles/marker_green.png');
@@ -109,6 +82,5 @@ and open the template in the editor.
                         .fit();
             }
         </script>
-    <?php } ?>
     </body>
 </html>

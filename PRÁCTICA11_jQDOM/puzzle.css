@@ -1,0 +1,43 @@
+body,html{position:relative;
+width: 100%;
+height: 100%;
+}
+div{
+    position:relative;
+    display: inline-block;
+}
+#taulell{
+    width: 500px;  
+    background-color: darkgoldenrod;
+    border:5px solid black;
+    padding:5px;
+    text-align: center;
+}
+
+.fitxa{
+    width: 150px;
+    border: 2px solid black;
+    height: 150px;
+    vertical-align: top;
+}
+.fitxa:hover{
+    border-color:blue;
+}
+#consola{
+    background-color: black;
+    color:white;
+    width: 200px;
+    height:480px;
+    overflow: auto;
+    vertical-align: top;
+}
+#fitxes_iguals{
+    overflow: auto;
+    width: 200px;
+    height: 320px;
+}
+#fitxa_seleccionada{
+    border:1px solid black;
+    width: 150px;
+    height: 150px
+}

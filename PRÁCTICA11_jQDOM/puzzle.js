@@ -12,15 +12,15 @@ var fitxes_inici = {
 };
 
 var fitxes_final = {
-        fitxa1: "img1"
-    , fitxa2: "img2"
-    , fitxa3: "img3"
-    , fitxa4: "img4"
-    , fitxa5: "img5"
-    , fitxa6: "img6"
-    , fitxa7: "img7"
-    , fitxa8: "img8"
-    , fitxa9: "img9"
+        fitxa1: "img1.jpg"
+    , fitxa2: "img2.jpg"
+    , fitxa3: "img3.jpg"
+    , fitxa4: "img4.jpg"
+    , fitxa5: "img5.jpg"
+    , fitxa6: "img6.jpg"
+    , fitxa7: "img7.jpg"
+    , fitxa8: "img8.jpg"
+    , fitxa9: "img9.jpg"
 };
 
 $(document).ready(init);
@@ -28,6 +28,7 @@ function init()
 {
     $("#fitxes_iguals > img").click(selectFitxa);
     $(".fitxa > img").click(selectFitxa);
+    $("#check").click(check);
 }
 
 function selectFitxa()
@@ -50,5 +51,14 @@ function selectPosition()
 
 function check()
 {
-    
+    var correcte = true;
+    $(".fitxa").each(function(i)
+    {
+        if($(this).children("img").attr("src") != fitxes_final["fitxa"+(i+1)])
+            correcte = false;
+    });
+    if(correcte)
+        window.alert("Correcte!");
+    else
+        window.alert("Incorrecte!");
 }

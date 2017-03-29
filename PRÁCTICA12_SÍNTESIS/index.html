@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="libs/jquery-3.1.1.min.js" type="text/javascript"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- STYLESHEETS -->
     <link href="index.css" rel="stylesheet" type="text/css"/>
@@ -37,17 +37,17 @@
     </header>
     <!-- FORMS -->
     <article class="container-fluid">
-        <form action="resultado.php" method="POST">
+        <form id="formulario" action="resultado.php" method="POST">
             <div id="forms" class="row">
                 <div id="p1" class="col-md-6">
                     <h2 id="player1">Player 1</h2>
                     <div class="form-group">
                         <label for="direccion1">Dirección:</label>
-                        <input type="text" class="form-control" name="direccion1" placeholder="Dirección" minlength="5" maxlength="20" required>
+                        <input type="text" class="form-control" name="direccion1" placeholder="Dirección">
                     </div>
                     <div class="form-group">
                         <label for="edad1">Edad:</label>
-                        <input type="text" class="form-control" name="edad1" placeholder="Edad" min="18" max="99" required>
+                        <input type="number" class="form-control" name="edad1" placeholder="Edad">
                     </div>
                     <div class="form-group">
                         <label for="personaje1">Personaje:</label>
@@ -62,11 +62,11 @@
                     <h2 id="player2">Player 2</h2>
                     <div class="form-group">
                         <label for="direccion2">Dirección:</label>
-                        <input type="text" class="form-control" name="direccion2" placeholder="Dirección" minlength="5" maxlength="20" required>
+                        <input type="text" class="form-control" name="direccion2" placeholder="Dirección">
                     </div>
                     <div class="form-group">
                         <label for="edad2">Edad:</label>
-                        <input type="text" class="form-control" name="edad2" placeholder="Edad" min="18" max="99" required>
+                        <input type="number" class="form-control" name="edad2" placeholder="Edad">
                     </div>
                     <div class="form-group">
                         <label for="personaje2">Personaje:</label>
@@ -76,6 +76,7 @@
                             <option value="ivy">Ivy</option>
                         </select>
                     </div>
+                </div>
             </div>
             <div id="fight-imgs" class="row">
                 <div class="col-md-1"></div>

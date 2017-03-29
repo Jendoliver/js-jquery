@@ -21,6 +21,8 @@ h2
 
 #fight { margin: 1%; }
 
+.formalert { color: red; }
+
 .imgs img
 {
     width: 200px;
@@ -34,6 +36,3 @@ h2
     height: 200px;
     display: inline-block !important;
 }
-
-#selectedcharimg1 { left: 1000px; }
-#selectedcharimg2 { right: 1000px; }

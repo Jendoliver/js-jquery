@@ -14,3 +14,26 @@ h2
     border-width: 2px;
     text-align: center;
 }
+
+#slider-imgs { text-align: center; }
+
+#fight-imgs { text-align: center; margin: 1%; }
+
+#fight { margin: 1%; }
+
+.imgs img
+{
+    width: 200px;
+    height: 200px;
+    display: inline-block !important;
+}
+
+.selectedchar
+{
+    width: 200px;
+    height: 200px;
+    display: inline-block !important;
+}
+
+#selectedcharimg1 { left: 1000px; }
+#selectedcharimg2 { right: 1000px; }

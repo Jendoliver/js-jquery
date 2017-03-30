@@ -1,0 +1,14 @@
+html, body
+{
+    width: 100%;
+    height: 100%;
+}
+
+h1 { color: white; }
+#mapcontainer { text-align: center; }
+#mapa 
+{ 
+    display: inline-block; 
+    width: 500px;
+    height: 400px;
+}

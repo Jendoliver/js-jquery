@@ -35,7 +35,6 @@ h2
 }
 #vs img 
 {
-    position: static;
     width: 100px; 
     height: 100px; 
     display: inline-block !important;
@@ -48,20 +47,7 @@ h2
     display: inline-block !important;
 }
 
-#selectedchar1
-{
-    position: relative;
-}
-
-#selectedchar2
-{
-    position: relative;
-}
-
-#selectedcharimg1 { position: absolute; }
-#selectedcharimg2 { position: absolute; }
-
-@media screen and (max-width: 992px) {
-  #selectedcharimg1 { position: relative; }
-  #selectedcharimg2 { position: relative; }
-}
+#selectedchar1 { position: relative; }
+#selectedchar2 { position: relative; }
+#selectedcharimg1 { position: relative; }
+#selectedcharimg2 { position: relative; }

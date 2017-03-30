@@ -29,6 +29,12 @@ h2
     height: 200px;
     display: inline-block !important;
 }
+#vs img 
+{ 
+    width: 100px; 
+    height: 100px; 
+    display: inline-block !important;
+}
 
 .selectedchar
 {
